@@ -1,0 +1,35 @@
+{
+  "id": "model-cards-oncology-schema-001",
+  "title": "Canonical model-card schema + template (Model Cards + Healthsheet + TRIPOD+AI/CLAIM)",
+  "project": "model-cards-oncology",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "oncology", "ml", "model-documentation", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Open cancer ML models (digital pathology, radiomics, genomics/transcriptomics) are published on Hugging Face, Zenodo, GitHub, and model zoos with little or no structured reporting of intended use, training/eval data provenance, subgroup/bias performance, limitations, or research-use-only status. Before documenting any specific model, the project needs one reusable canonical model-card schema and template that all outputs (Hugging Face model-card YAML, Model Card Toolkit JSON, Croissant eval metadata, patient-facing summary) are projections of. The deliverable is documentation about models, never the model, weights, or any patient data, and never medical advice.",
+  "objective": "Create the reusable canonical model-card schema and Markdown+YAML template that every per-model card task will use, integrating Model Cards (Mitchell et al.), Healthsheet, and TRIPOD+AI/CLAIM reporting items, with a mandatory research-use-only/not-medical-advice disclaimer and provenance on every field.",
+  "acceptanceCriteria": [
+    "Canonical schema documents all fields: id, name, version, authors, modality, task, provenance {paperDoi, weightsUrl, codeUrl, retrievedAt}, modelLicense {id, url, permitsDerivatives, snapshotRef}, intendedUse, outOfScopeUse[], intendedUsers[], trainingData[]/evalData[] {name, source, license {id,url,permitsUse,snapshotRef}, accessTier, deidentification {method, source}, composition, gaps[]}, metrics {headline[], subgroups[] {dimension, group, metric, value, verified, source}}, calibration, limitations[], failureModes[], clinicalValidation, regulatoryStatus, ethicalConsiderations, disclaimer, citations[] {claim, source}, specVersions, completenessScore {before, after}.",
+    "Markdown + YAML front-matter template projects cleanly to the Hugging Face model-card format and hard-codes a mandatory research-use-only / not-medical-advice disclaimer block and a required out-of-scope-use section.",
+    "Schema integrates Healthsheet (data documentation) and TRIPOD+AI/CLAIM (reporting) items; specVersions block pins Model Cards, HF model-card spec, Croissant v1.0, Model Card Toolkit, TRIPOD+AI, CLAIM, and Healthsheet versions.",
+    "Template explicitly states the deliverable is documentation (not the model/data) and that documentation output is licensed CC-BY-4.0; metrics carry a verified enum (reported|reproduced|reported-unverified|not-reported) so numbers are never fabricated.",
+    "At least one filled-in worked-example skeleton (synthetic model, no real patient data) is included to guide contributors.",
+    "pnpm build && pnpm test && pnpm lint pass for any committed tooling; commit is DCO signed-off."
+  ],
+  "resources": [
+    "C:\\code\\elyos\\planning\\projects\\model-cards-oncology\\PLAN.md",
+    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "Mitchell et al., Model Cards for Model Reporting (2019)",
+    "Rostamzadeh et al., Healthsheet; TRIPOD+AI (2024); CLAIM (2024)",
+    "Hugging Face model-card spec; Google Model Card Toolkit; Croissant ML v1.0"
+  ],
+  "output": "A canonical model-card schema definition plus a Markdown+YAML template, committed to the project repo and ready for reuse by per-model card tasks.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
