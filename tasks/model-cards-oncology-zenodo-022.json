@@ -1,0 +1,32 @@
+{
+  "id": "model-cards-oncology-zenodo-022",
+  "title": "Zenodo metadata adapter + DOI provenance for self-hosted cards",
+  "project": "model-cards-oncology",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "oncology", "ml", "tooling", "model-documentation"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The self-serve acceptance fallback used in the pilot (pilot-009) and potentially in other tasks relies on publishing a card as a Zenodo record to obtain a citable DOI. Currently this is done manually. A Zenodo metadata adapter that projects from the canonical schema would automate the metadata preparation step, making the self-serve path faster and more consistent. This is a backlog task powering the fallback acceptance channel.",
+  "objective": "Build and ship a Zenodo metadata adapter that projects canonical model-card objects into Zenodo deposit metadata JSON, enabling automated preparation of Zenodo record submissions for self-hosted model cards with citable DOIs.",
+  "acceptanceCriteria": [
+    "Adapter projects canonical model-card JSON into valid Zenodo deposit metadata JSON, including title, description, creators, keywords, license, and the resource_type appropriate for model documentation.",
+    "DOI provenance is recorded: the adapter captures the Zenodo DOI (if already assigned) and writes it back to the card's provenance field.",
+    "Committed golden canonical-to-Zenodo-metadata fixture is diffed in CI; output is validated against the Zenodo deposit API schema.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials, tokens, or patient data in any committed file.",
+    "Commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — Cold-start de-risking (Zenodo self-serve fallback), Dependencies & integrations",
+    "TASKS.md — Backlog zenodo-022",
+    "Zenodo REST API documentation; Zenodo deposit metadata schema"
+  ],
+  "output": "A merged PR adding a Zenodo deposit metadata adapter with a golden fixture and CI integration.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

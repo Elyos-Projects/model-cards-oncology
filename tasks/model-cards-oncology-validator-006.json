@@ -1,0 +1,33 @@
+{
+  "id": "model-cards-oncology-validator-006",
+  "title": "Schema validator + Hugging Face model-card metadata emitter",
+  "project": "model-cards-oncology",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "oncology", "ml", "tooling", "model-documentation"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Without a schema validator and a Hugging Face model-card emitter, every per-model card task requires manual format checking and risks producing non-conformant output. The validator ensures every card is complete and schema-valid before review; the HF emitter converts the canonical JSON to the YAML front-matter required by Hugging Face model cards. Both are CI-gated with golden fixtures. Depends on schema-001.",
+  "objective": "Build and ship a TypeScript schema validator for the canonical model-card schema and a Hugging Face model-card YAML/Markdown metadata emitter, both tested with golden fixtures in CI.",
+  "acceptanceCriteria": [
+    "Schema validator accepts valid canonical model-card objects and rejects malformed ones; golden valid-card fixtures pass and golden invalid-card fixtures fail in CI.",
+    "Hugging Face model-card YAML front-matter emitter converts canonical model-card JSON to valid HF model-card YAML; output is validated against the pinned HF model-card metadata spec; golden canonical-to-HF output fixtures are diffed in CI.",
+    "specVersions block in the emitter output records the pinned HF model-card spec version.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials or patient data in any committed file.",
+    "Commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — Tech stack, Solution approach, Test fixtures & golden files",
+    "TASKS.md — M0 validator-006",
+    "Hugging Face model-card metadata spec (current modelcard schema)",
+    "Elyos packages/schema/src/schemas.ts"
+  ],
+  "output": "A merged PR adding a TypeScript schema validator and HF model-card YAML emitter with golden fixtures and CI integration.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

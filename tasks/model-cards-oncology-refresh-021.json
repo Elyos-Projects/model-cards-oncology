@@ -1,0 +1,33 @@
+{
+  "id": "model-cards-oncology-refresh-021",
+  "title": "Staleness/refresh + model-version drift process",
+  "project": "model-cards-oncology",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "oncology", "ml", "model-documentation", "governance"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Delivered model cards record the model version and retrieval date at the time of authoring. Models are updated over time; without a process to detect and handle version drift, cards become stale and may misrepresent a model's current state. The schema validator can flag spec drift; this task defines the human process for staleness detection, card refresh, and steward handoff. Depends on validator-006.",
+  "objective": "Design and publish the staleness/refresh and model-version drift process: defining how drift is detected, when a card becomes a maintenance task, and who owns the ongoing host/maintainer liaison to keep cards current.",
+  "acceptanceCriteria": [
+    "Process document defines the staleness threshold: what constitutes a material model update (new weights version, new eval results, license change, dataset update) that triggers a card refresh task.",
+    "Process specifies how drift is detected: the schema validator's specVersions check for tooling drift; periodic review cadence (e.g. quarterly) for model-version drift; steward responsibility for monitoring host/maintainer channels.",
+    "Process defines who creates the refresh task: the steward creates a maintenance-type task when drift is detected, routing it to the appropriate reviewer(s).",
+    "A named steward (or acting placeholder) is recorded as responsible for ongoing host/maintainer liaison and drift monitoring.",
+    "Process document is committed to the project repo and cross-referenced from the canonical schema.",
+    "At least one concrete example of a drift scenario and its resolution path is included in the document."
+  ],
+  "resources": [
+    "PLAN.md — Sustainability & maintenance; Risks (Model/data versions change)",
+    "TASKS.md — M3 refresh-021",
+    "tasks/model-cards-oncology-validator-006.json"
+  ],
+  "output": "A committed staleness/refresh and model-version drift process document, with a named steward or acting placeholder, committed to the project repo.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

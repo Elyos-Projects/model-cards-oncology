@@ -1,0 +1,34 @@
+{
+  "id": "model-cards-oncology-gate-003",
+  "title": "Model + cancer-data license/de-identification gate (blocking checklist)",
+  "project": "model-cards-oncology",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "oncology", "data-license", "de-identification", "governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Before any open cancer ML model can be documented, both the model artifact and every training/eval dataset must pass a mandatory license and de-identification gate. Without a formal, committed gate checklist, reviewers could apply different standards leading to license misclassification — a high-impact risk. This blocking checklist is a prerequisite for all per-model card tasks and the pilot. Depends on schema-001.",
+  "objective": "Design and publish the model + cancer-data license/de-identification gate: a non-skippable, auditable checklist that produces a committed PASS/FLAG/EXCLUDE artifact for each candidate model, enforcing the project's binding cancer guardrails.",
+  "acceptanceCriteria": [
+    "Checklist enforces open-access/aggregate/de-identified data only: controlled-access sources (dbGaP, EGA, individual-level biobanks) and identifiable patient data are auto-EXCLUDE (or stub-only, with reason recorded).",
+    "Objective license criterion: PASS only if model permitsDerivatives:true AND every dataset permitsUse:true, each backed by a cited license clause/URL; missing or unparseable evidence = FLAG/EXCLUDE (no default-allow). NC/share-alike cases deferred to ncpolicy-004.",
+    "Requires recording each license id, URL, snapshot reference (committed copy + SHA-256 + Wayback), the data access tier, and the de-identification method as documented by the data provider (never de-identified by this project).",
+    "Encodes the model and eval-data access protocol: text artifacts primary; reproduce only on open de-identified eval data; local/ephemeral; commit aggregates only; halt on access barrier or PII signal.",
+    "Produces a committed PASS/FLAG/EXCLUDE artifact per model recording which checks ran, what fired, and the rationale.",
+    "Gate document reviewed and approved by the Data-License+Privacy reviewer before any triage task begins."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance section (binding cancer guardrails)",
+    "TASKS.md — M0 gate-003 acceptance criteria",
+    "SPDX license list",
+    "NCI/TCGA/CPTAC data-use guidelines"
+  ],
+  "output": "A committed gate checklist document (and associated artifact template) defining the blocking PASS/FLAG/EXCLUDE criteria for model + cancer-data license/de-identification triage.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

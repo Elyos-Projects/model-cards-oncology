@@ -1,0 +1,31 @@
+{
+  "id": "model-cards-oncology-reviewer-002",
+  "title": "Name/secure the Data-License+Privacy reviewer (blocking gate role)",
+  "project": "model-cards-oncology",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "oncology", "data-license", "privacy", "governance"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The Data-License+Privacy reviewer is a mandatory, non-skippable gatekeeper for every model card: no card ships without their sign-off. Until this role is named and filled, all tasks remain verifiedNeed:false and no model can pass the cancer-data gate. This blocking role must be filled before the M0 pilot review. Without a named reviewer, triage halts.",
+  "objective": "Identify and secure at least one qualified Data-License+Privacy reviewer who will serve as the non-skippable gatekeeper for license and de-identification verification on all model-card tasks; record the named reviewer(s) and their agreement to fill this role.",
+  "acceptanceCriteria": [
+    "At least one named, qualified Data-License+Privacy reviewer is confirmed and has agreed to serve in the gatekeeper role.",
+    "The reviewer's name, affiliation, and contact method are recorded in a committed document.",
+    "The reviewer understands and accepts the gate criteria: confirming that every model artifact and every training/eval dataset is appropriately licensed (permitsDerivatives/permitsUse=true with cited clause/URL) and that all data is open/aggregate/de-identified with no controlled-access or identifiable data.",
+    "A rotation plan or backup reviewer is documented to ensure the role is never vacant (triage halts if no named reviewer exists).",
+    "The outcome document is committed to the project repo."
+  ],
+  "resources": [
+    "PLAN.md — Governance, roles & stakeholders section",
+    "TASKS.md — M0 reviewer-002"
+  ],
+  "output": "A committed document recording the named Data-License+Privacy reviewer(s), their agreement to the role, and a rotation/backup plan.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

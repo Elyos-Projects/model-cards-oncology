@@ -1,0 +1,32 @@
+{
+  "id": "model-cards-oncology-catalog-011",
+  "title": "Build MODEL-CATALOG.md (license/data-classified candidate models)",
+  "project": "model-cards-oncology",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "oncology", "ml", "model-documentation", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Triage tasks need a candidate pool to draw from. The MODEL-CATALOG.md is the funnel: a license- and data-classified catalog of real open cancer ML models across modalities. Each entry is a first-pass triage signal only — no entry is pre-approved; each still requires its own gate-003 artifact before becoming a card task. Depends on gate-003 and ncpolicy-004.",
+  "objective": "Research and publish a MODEL-CATALOG.md containing at least 15 real open cancer ML models classified with first-pass triage columns across digital pathology, radiology, genomics, transcriptomics, and other oncology modalities.",
+  "acceptanceCriteria": [
+    "At least 15 real open cancer ML models listed with columns: model name/URL, modality (pathology|radiology|genomics|transcriptomics|multi-omics|nlp), weights URL, model license (first-pass SPDX id), training-data sources with openness/access tier (open|aggregate|deidentified|controlled), PII risk (low|medium|high), and first-pass disposition (candidate|controlled-access-exclude|license-flag).",
+    "Models depending on controlled-access data (dbGaP, EGA, individual-level biobanks) are marked EXCLUDE/stub-only with the reason recorded.",
+    "Each entry is explicitly marked as first-pass triage only and notes that gate-003 must be applied before the model becomes a card task.",
+    "Catalog is reviewed by the Data-License+Privacy reviewer before being committed.",
+    "Document committed as MODEL-CATALOG.md in the project repo."
+  ],
+  "resources": [
+    "PLAN.md — Scope (Candidate model pool), MODEL-CATALOG.md description",
+    "TASKS.md — M1 catalog-011 acceptance criteria",
+    "Hugging Face Hub; Zenodo; BioImage Model Zoo; MONAI Model Zoo; Grand Challenge; TCIA"
+  ],
+  "output": "A committed MODEL-CATALOG.md with at least 15 classified candidate cancer ML models, reviewed by the Data-License+Privacy reviewer.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

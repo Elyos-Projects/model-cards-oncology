@@ -1,0 +1,34 @@
+{
+  "id": "model-cards-oncology-ncpolicy-004",
+  "title": "NC / share-alike acceptance policy (COSMIC/OncoKB, cBioPortal)",
+  "project": "model-cards-oncology",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "oncology", "data-license", "open-science", "governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Several widely used cancer genomic databases (COSMIC, OncoKB, cBioPortal cohorts) carry non-commercial (NC) or share-alike licenses. Models trained on them cannot be documented until a policy decides whether the project's CC-BY-4.0 documentation is compatible with those NC terms or whether such models must be excluded. This policy must be decided and committed before any triage so all reviewers apply the same rule. Depends on gate-003.",
+  "objective": "Define and publish the NC/share-alike acceptance policy that determines when a model trained on NC or share-alike datasets (COSMIC, OncoKB, cBioPortal) may be documented under a CC-BY-4.0 card and when such models must be flagged or excluded, with rationale recorded.",
+  "acceptanceCriteria": [
+    "Policy states clearly whether CC-BY-4.0 documentation of a model's facts (metrics, architecture, intended use) constitutes a derivative work of NC data and therefore requires NC-compatible licensing, or whether factual documentation falls outside the NC restriction — with legal rationale cited.",
+    "Policy specifies the disposition for COSMIC-backed, OncoKB-backed, and cBioPortal share-alike-backed models: PASS (with stated conditions), FLAG (deferred human decision), or EXCLUDE (with reason).",
+    "Policy defines when the NC concern must be escalated to the Data-License+Privacy reviewer before proceeding.",
+    "Policy is reviewed and approved by the Data-License+Privacy reviewer.",
+    "Outcome document is committed; all downstream triage tasks apply this policy without re-debating it.",
+    "Default-deny clause is explicit: when in doubt, the model is flagged/excluded rather than defaulting to allow."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance; per-source treatment of COSMIC/OncoKB/cBioPortal",
+    "TASKS.md — M0 ncpolicy-004",
+    "Creative Commons NC license terms",
+    "COSMIC non-commercial license; OncoKB license; cBioPortal ODbL terms"
+  ],
+  "output": "A committed NC/share-alike acceptance policy document covering COSMIC, OncoKB, and cBioPortal datasets, reviewed and approved by the Data-License+Privacy reviewer.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "model-cards-oncology-triage-012",
+  "title": "Triage 5 candidate models through the gate",
+  "project": "model-cards-oncology",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "oncology", "ml", "data-license", "governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "After the candidate catalog is built, five models from that catalog need to pass through the gate to produce committed PASS/FLAG/EXCLUDE artifacts confirming which are eligible for card tasks. These gate artifacts feed card-013, card-014, and scale-018. Depends on gate-003, ncpolicy-004, and catalog-011.",
+  "objective": "Apply the gate-003 checklist to five candidate models from the MODEL-CATALOG.md, produce a committed gate artifact for each (PASS/FLAG/EXCLUDE + rationale), and confirm which models are eligible for model card authoring.",
+  "acceptanceCriteria": [
+    "Five models from the MODEL-CATALOG.md evaluated; each has a committed gate artifact (PASS/FLAG/EXCLUDE + rationale).",
+    "Each PASS artifact records model and dataset license ids, URLs, and snapshots (committed copy + SHA-256 + Wayback), and confirms permitsDerivatives:true (model) and permitsUse:true (each dataset) with cited evidence; data confirmed open/de-identified.",
+    "Any controlled-access/identifiable data, NC conflict, or unclear license results in FLAG/EXCLUDE with the specific concern surfaced.",
+    "ncpolicy-004 is applied to any COSMIC/OncoKB/cBioPortal-backed models encountered.",
+    "All five gate artifacts reviewed and approved by the Data-License+Privacy reviewer.",
+    "Gate artifacts committed to the project repo."
+  ],
+  "resources": [
+    "PLAN.md — Pipeline (per model), Triage & gate step",
+    "TASKS.md — M1 triage-012 acceptance criteria",
+    "tasks/model-cards-oncology-gate-003.json",
+    "tasks/model-cards-oncology-ncpolicy-004.json"
+  ],
+  "output": "Five committed gate artifacts (PASS/FLAG/EXCLUDE) for five candidate cancer ML models, reviewed and approved by the Data-License+Privacy reviewer.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
