@@ -1,0 +1,32 @@
+{
+  "id": "model-cards-oncology-snapshot-010",
+  "title": "License + data-provenance snapshot capture in card flow",
+  "project": "model-cards-oncology",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "oncology", "tooling", "data-license", "provenance"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Each model card must record a snapshot of the license text and data-provenance page for both the model artifact and every dataset: a committed local copy, SHA-256 hash, and Wayback save URL. Without tooling, this is a manual and error-prone step in the card authoring flow. Depends on schema-001 and gate-003.",
+  "objective": "Build and ship a snapshot capture utility that records and verifies committed license + provenance snapshots (local copy + SHA-256 + Wayback URL) for model artifacts and datasets as part of the card authoring flow.",
+  "acceptanceCriteria": [
+    "Utility captures a committed local copy of the license text/page and a Wayback save URL for both the model artifact and each dataset; snapshotRef records the committed path, SHA-256 hash, and Wayback timestamp.",
+    "A bare license URL is rejected as insufficient; the committed copy + SHA-256 hash + Wayback URL are all required for a valid snapshotRef.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials embedded in any committed file.",
+    "Tests include a golden snapshot fixture verified in CI.",
+    "Commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — License + data-provenance snapshot format (committed copy + SHA-256 + Wayback URL)",
+    "TASKS.md — M1 snapshot-010 acceptance criteria",
+    "Wayback Machine Save API"
+  ],
+  "output": "A merged PR adding a license + provenance snapshot capture utility with golden fixture tests and CI integration.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

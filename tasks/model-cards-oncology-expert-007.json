@@ -1,0 +1,31 @@
+{
+  "id": "model-cards-oncology-expert-007",
+  "title": "Identify/secure oncology expert + patient-advocate reviewers (for high-risk layer)",
+  "project": "model-cards-oncology",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "oncology", "governance", "patient-advocacy"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Any patient-facing plain-language summary (task plainlang-019) is classified riskTier:high and requires mandatory credentialed oncologist sign-off AND patient-advocate sign-off before publication. No high-risk output may ship until these reviewers are secured. This outreach task identifies and confirms both roles in M0 so they are ready before any high-risk task starts.",
+  "objective": "Identify and confirm at least one credentialed oncologist reviewer and at least one patient advocate who agree to review patient-facing summaries before publication, and record their commitment in a committed document.",
+  "acceptanceCriteria": [
+    "At least one credentialed oncologist (MD or equivalent with oncology expertise) is identified and confirms willingness to review patient-facing plain-language summaries before publication.",
+    "At least one patient advocate (with cancer-patient community affiliation or relevant lived experience) is identified and confirms willingness to review patient-facing summaries before publication.",
+    "Both reviewers understand their role: confirming 'not medical advice' framing, clinical accuracy of plain-language content, and prominence of research-use-only disclaimers.",
+    "Names, affiliations, and contact methods for both reviewers are recorded in a committed document.",
+    "Document notes that no patient-facing (riskTier:high) output may ship without both sign-offs recorded in the delivering task's acceptanceCriteria."
+  ],
+  "resources": [
+    "PLAN.md — Quality, review & risk gates; Governance, roles & stakeholders",
+    "TASKS.md — M0 expert-007; M3 plainlang-019"
+  ],
+  "output": "A committed document recording the confirmed oncology expert and patient-advocate reviewers and their agreement to the high-risk review role.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "model-cards-oncology-card-013",
+  "title": "Model card for accepted model #2",
+  "project": "model-cards-oncology",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "oncology", "ml", "model-documentation", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Following the pilot model card (pilot-009) and the first triage pass (triage-012), this task authors the full model card for the second gate-passed model. It targets acceptance by the model's host and extends the project toward the M1 goal of at least 2 accepted cards cumulatively. Depends on pilot-009 and triage-012.",
+  "objective": "Produce a complete, source-verified model card for the second gate-passed open cancer ML model and get it accepted by the model's host, with the acceptance evidence artifact recorded.",
+  "acceptanceCriteria": [
+    "Model selected from triage-012 PASS artifacts with a documented acceptance path (informal channel or Zenodo fallback).",
+    "Model and every dataset confirmed gate-003 PASS (committed artifact exists); controlled-access/identifiable data absent.",
+    "Complete card produced using the canonical schema (schema-001): intended use, out-of-scope use, data provenance, headline and subgroup metrics (reported or gap-flagged per bias-005), limitations, clinical-validation status, regulatory status, and the not-medical-advice disclaimer; every claim cited in citations[].",
+    "Card validated by the schema validator (validator-006) and approved by the Data-License+Privacy reviewer and the ML/technical reviewer.",
+    "Completeness score before/after recorded; after score >= 90/100.",
+    "Card accepted by the model host (informal channel or Zenodo) with the Steward's outcomes/<model-id>.json acceptance artifact recorded — or submitted with the blocker surfaced."
+  ],
+  "resources": [
+    "PLAN.md — Pipeline (per model), Definition of Shipped",
+    "TASKS.md — M1 card-013",
+    "tasks/model-cards-oncology-schema-001.json",
+    "tasks/model-cards-oncology-gate-003.json",
+    "tasks/model-cards-oncology-bias-005.json"
+  ],
+  "output": "A complete model card for accepted model #2, committed to the project repo, submitted to the model host, and accompanied by the Steward's outcomes/<model-id>.json acceptance artifact.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

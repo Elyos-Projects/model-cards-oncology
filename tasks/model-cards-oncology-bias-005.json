@@ -1,0 +1,34 @@
+{
+  "id": "model-cards-oncology-bias-005",
+  "title": "Bias & subgroup reporting standard (required breakdowns + gap statements)",
+  "project": "model-cards-oncology",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "oncology", "ml", "bias", "fairness", "model-documentation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Underreporting of subgroup performance in cancer ML models is a known and high-risk problem: models may perform very differently across sites/scanners, sexes, age bands, or ancestry groups, but these breakdowns are rarely published. Without a standard, model card contributors would apply inconsistent rules about when to report, estimate, or omit subgroup metrics. Depends on schema-001.",
+  "objective": "Define and publish the bias and subgroup reporting standard that every model card must satisfy: specifying required subgroup dimensions, mandating explicit gap statements when data is unavailable, and defining the verified enum used to distinguish reported, reproduced, reported-unverified, and not-reported metrics.",
+  "acceptanceCriteria": [
+    "Standard enumerates required subgroup dimensions where available: imaging site/scanner, sex, age band, and ancestry/race (when ethically reported by the original study), plus the headline and calibration metrics expected for each.",
+    "Standard mandates that every card either reports subgroup metrics with cited sources OR carries an explicit, sourced 'subgroup performance not reported' gap statement — no silent omission is permitted.",
+    "Standard defines the verified enum: reported (authors reported; cited), reproduced (harness verified on open eval data), reported-unverified (cited but not independently verified), not-reported (absent from all sources); specifies when each value applies.",
+    "Standard specifies when reproduction via the subgroup-metric harness is required (open eval data available) versus citing the authors' numbers (closed/unavailable eval data).",
+    "Standard is reviewed and approved by the Data-License+Privacy reviewer and the ML/technical reviewer.",
+    "Document is committed to the project repo and referenced from the canonical schema."
+  ],
+  "resources": [
+    "PLAN.md — Solution approach, Metrics & bias pipeline step",
+    "TASKS.md — M0 bias-005 acceptance criteria",
+    "Mitchell et al., Model Cards for Model Reporting (2019)",
+    "TRIPOD+AI (2024) bias/fairness reporting items"
+  ],
+  "output": "A committed bias and subgroup reporting standard specifying required dimensions, gap-statement rules, and the verified enum, for use by all model card tasks.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

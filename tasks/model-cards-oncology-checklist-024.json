@@ -1,0 +1,34 @@
+{
+  "id": "model-cards-oncology-checklist-024",
+  "title": "TRIPOD+AI / CLAIM conformance checklist generator",
+  "project": "model-cards-oncology",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "oncology", "ml", "tooling", "model-documentation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The canonical schema integrates TRIPOD+AI (2024) and CLAIM (2024) reporting items. Currently, conformance with these checklists is assessed manually by the ML/technical reviewer. A checklist generator that auto-scores a canonical model-card object against the TRIPOD+AI and CLAIM reporting items would make conformance visible, repeatable, and auditable — reducing reviewer burden and making completeness gaps explicit before review. A card's completenessScore is currently computed manually; this tool operationalizes it.",
+  "objective": "Build and ship a TRIPOD+AI / CLAIM conformance checklist generator that auto-scores a canonical model-card object against the reporting items from both standards, producing a machine-readable conformance report and contributing to the card's completenessScore.",
+  "acceptanceCriteria": [
+    "Generator scores a canonical model-card object against the TRIPOD+AI (2024) and CLAIM (2024) reporting items, producing a per-item PASS/FAIL/NOT-APPLICABLE result with the field(s) that satisfy each item.",
+    "Generator computes a summary completenessScore (0–100) from the item results, consistent with the project's scoring definition in PLAN.md.",
+    "Output is a machine-readable JSON conformance report; a human-readable Markdown rendering is also produced.",
+    "Committed golden canonical-to-conformance-report fixtures are diffed in CI; the pinned TRIPOD+AI and CLAIM versions are recorded in specVersions.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials or patient data in any committed file.",
+    "Commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — Healthcare reporting standards, specVersions, completenessScore definition",
+    "TASKS.md — Backlog checklist-024",
+    "TRIPOD+AI (2024) checklist items",
+    "CLAIM — Checklist for AI in Medical Imaging (2024 update)"
+  ],
+  "output": "A merged PR adding a TRIPOD+AI / CLAIM conformance checklist generator with golden fixtures, CI integration, and pinned spec versions.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

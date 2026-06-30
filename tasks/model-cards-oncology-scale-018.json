@@ -1,0 +1,36 @@
+{
+  "id": "model-cards-oncology-scale-018",
+  "title": "Model cards for models #4–#6 via tooling",
+  "project": "model-cards-oncology",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "oncology", "ml", "model-documentation", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M2's goal is to demonstrate that the full tooling pipeline (canonical schema, schema validator, HF emitter, Model Card Toolkit adapter, Croissant adapter, and the subgroup-metric harness) reduces per-model effort while maintaining quality. This task authors three additional model cards (models #4, #5, and #6) using the full tooling pipeline, gets them accepted upstream, and records effort per model against the M0/M1 baseline. Depends on card-013, mct-016, harness-017, and partner-015.",
+  "objective": "Produce complete, source-verified model cards for open cancer ML models #4, #5, and #6 using the full tooling pipeline and get all three accepted upstream, with per-model effort recorded to evidence reduction vs. the M0/M1 baseline.",
+  "acceptanceCriteria": [
+    "All three models selected from the triage-012 PASS artifacts or additional gate-passed models, each with a documented acceptance path (confirmed partner channel or Zenodo fallback).",
+    "Each model and every associated dataset confirmed gate-003 PASS (committed artifact exists); controlled-access/identifiable data confirmed absent for all three.",
+    "Complete cards produced for all three models using the canonical schema, emitted via the mct-016 adapters and validated by the schema validator; each card includes intended use, out-of-scope use, data provenance, headline and subgroup metrics (reported or harness-verified or gap-flagged per bias-005), limitations, clinical-validation status, regulatory status, and the not-medical-advice disclaimer; every claim cited in citations[].",
+    "All three cards accepted upstream (confirmed partner channel or Zenodo) with the Steward's outcomes/<model-id>.json acceptance artifact recorded for each — or submitted with the blocker surfaced.",
+    "Per-model effort recorded for each card: AI-session minutes and human-review cycles logged by the Steward in the outcome ledger; median effort for models #4–#6 compared against the recorded M0/M1 baseline median to evidence measurable reduction.",
+    "Cumulative accepted card count reaches at least 5 after this task (counting pilot-009 + card-013 + card-014 + these three)."
+  ],
+  "resources": [
+    "PLAN.md — M2 exit criteria, Effort-reduction metric, Definition of Shipped",
+    "TASKS.md — M2 scale-018 acceptance criteria",
+    "tasks/model-cards-oncology-card-013.json",
+    "tasks/model-cards-oncology-mct-016.json",
+    "tasks/model-cards-oncology-harness-017.json",
+    "tasks/model-cards-oncology-partner-015.json"
+  ],
+  "output": "Three complete model cards for open cancer ML models #4–#6, committed to the project repo, accepted upstream with evidence artifacts, and per-model effort data logged in the outcome ledger.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "model-cards-oncology-i18n-025",
+  "title": "Translate a delivered patient-facing summary (domain reviewer)",
+  "project": "model-cards-oncology",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "oncology", "ml", "model-documentation", "patient-advocacy"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "A delivered and signed-off plain-language patient-facing summary (plainlang-019) reaches only English-speaking audiences. Translating it widens reach to patient advocates and patients in other language communities. As a patient-facing document, the translation carries the same riskTier:high as the source and requires sign-off from both an oncology domain reviewer (to confirm clinical accuracy is preserved) and a qualified language reviewer before publication. Zero ungated patient-facing output ships in any language.",
+  "objective": "Translate one delivered and signed-off plain-language patient-facing summary into a target language, with sign-off from both a credentialed oncology domain reviewer (for accuracy) and a qualified language reviewer (for fluency and cultural appropriateness) recorded before publication.",
+  "acceptanceCriteria": [
+    "Translation is derived only from a fully signed-off plain-language summary (plainlang-019 or equivalent); the source document's oncologist + patient-advocate sign-off is recorded as a prerequisite.",
+    "The translated document preserves the 'not medical advice' disclaimer and research-use-only framing in the target language; no diagnostic, prognostic, or treatment guidance is present or implied.",
+    "A credentialed oncologist (or equivalent oncology domain expert with language proficiency) has reviewed the translation for clinical accuracy and signed off before publication; their name, affiliation, and sign-off date are recorded in a committed review artifact.",
+    "A qualified language reviewer (native or fluent speaker with domain familiarity) has reviewed the translation for fluency and cultural appropriateness and signed off before publication; their name and sign-off date are recorded in the same committed review artifact.",
+    "The translation is published only after both sign-offs are recorded; the review artifact is committed alongside the translated document.",
+    "The target language is specified and documented at the start of the task."
+  ],
+  "resources": [
+    "PLAN.md — Patient-facing layer; Quality, review & risk gates",
+    "TASKS.md — Backlog i18n-025",
+    "tasks/model-cards-oncology-plainlang-019.json",
+    "tasks/model-cards-oncology-expert-007.json"
+  ],
+  "output": "A translated patient-facing summary in the target language, committed with a review artifact recording oncology domain reviewer and language reviewer sign-offs, published only after both sign-offs are recorded.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

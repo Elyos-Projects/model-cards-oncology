@@ -1,0 +1,37 @@
+{
+  "id": "model-cards-oncology-pilot-009",
+  "title": "End-to-end model card for one pilot open cancer model",
+  "project": "model-cards-oncology",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "oncology", "ml", "model-documentation", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The pilot proves the end-to-end pipeline from gate through authoring to acceptance and is the final M0 deliverable. It must use a model and acceptance path selected for realistic delivery: either an informal channel (author agreed to review a model-card PR) or a self-serve Zenodo fallback. No pilot model is selected until outreach-008 provides the shortlist. Depends on schema-001, gate-003, ncpolicy-004, bias-005, validator-006, reviewer-002, and outreach-008.",
+  "objective": "Produce a complete, source-verified model card for one pilot open cancer ML model that has passed the cancer-data gate, and get it accepted by the model's host via an informal channel or Zenodo self-serve fallback, with the acceptance evidence artifact recorded.",
+  "acceptanceCriteria": [
+    "Pilot model selected from outreach-008 shortlist on a realistic acceptance path (informal channel or Zenodo self-serve fallback) — documented before authoring begins.",
+    "Model and every dataset passed gate-003 (open/de-identified; license permits use) with the committed gate artifact; controlled-access/identifiable data confirmed absent.",
+    "Complete card produced using the canonical schema (schema-001): intended use, out-of-scope use, data provenance, headline and subgroup metrics (reported or gap-flagged per bias-005), limitations, clinical-validation status, regulatory status, and the not-medical-advice disclaimer; every claim cited in citations[].",
+    "Card validated by the schema validator (validator-006) and approved by the Data-License+Privacy reviewer and the ML/technical reviewer.",
+    "Provenance and license snapshots recorded (committed copy + SHA-256 + Wayback) for the model artifact and each dataset.",
+    "Completeness score before/after recorded; after score >= 90/100.",
+    "Card accepted via the informal channel or Zenodo self-serve fallback with the Steward's outcomes/<model-id>.json acceptance artifact recorded — or submitted with the blocker surfaced."
+  ],
+  "resources": [
+    "PLAN.md — Pipeline (per model), M0 cold-start de-risking, Definition of Shipped",
+    "TASKS.md — M0 pilot-009 acceptance criteria",
+    "tasks/model-cards-oncology-schema-001.json",
+    "tasks/model-cards-oncology-gate-003.json",
+    "tasks/model-cards-oncology-bias-005.json",
+    "Mitchell et al., Model Cards for Model Reporting (2019)"
+  ],
+  "output": "A complete model card for the pilot open cancer ML model, committed to the project repo, submitted to the model host, and accompanied by the Steward's outcomes/<model-id>.json acceptance artifact.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

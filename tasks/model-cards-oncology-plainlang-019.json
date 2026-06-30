@@ -1,0 +1,35 @@
+{
+  "id": "model-cards-oncology-plainlang-019",
+  "title": "Plain-language \"what this model is / is not\" summary (education-only)",
+  "project": "model-cards-oncology",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "oncology", "ml", "model-documentation", "patient-advocacy"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Technical model cards are written for researchers and ML practitioners. Patient advocates, patients, and non-specialist educators also need to understand what an open cancer ML model does and does not do. This task produces a plain-language education-only summary derived from an already-accepted technical card. It is classified riskTier:high because patient-facing content that misrepresents a model's purpose or limitations could cause harm. Zero patient-facing output ships ungated. Depends on card-013 (an accepted technical card) and expert-007 (secured oncology expert + patient-advocate reviewers).",
+  "objective": "Produce a plain-language education-only summary explaining what one accepted open cancer ML model is and is not for, derived strictly from the accepted technical card, with credentialed oncologist sign-off and patient-advocate sign-off recorded before publication.",
+  "acceptanceCriteria": [
+    "Summary is derived only from the already-accepted technical card (card-013 or a subsequent accepted card); it introduces no claims not present in the parent card's citations[].",
+    "Summary states in plain language what the model does, what it is not for, and its key limitations and biases; no diagnostic, prognostic, or treatment guidance is present or implied.",
+    "A prominent 'not medical advice' disclaimer and research-use-only framing appear at the top of the document; readers are explicitly directed to qualified clinicians for medical decisions.",
+    "Every factual claim in the summary traces to a specific entry in the parent technical card's citations[] index.",
+    "A credentialed oncologist (MD or equivalent with oncology expertise, as secured in expert-007) has reviewed and signed off the summary before publication; their name and sign-off date are recorded in a committed review artifact.",
+    "A patient advocate (as secured in expert-007) has reviewed and signed off the summary before publication; their name and sign-off date are recorded in the same committed review artifact.",
+    "The summary is published only after both sign-offs are recorded; the review artifact is committed alongside the summary document."
+  ],
+  "resources": [
+    "PLAN.md — Patient-facing plain-language summaries; Quality, review & risk gates; Two-tier risk model",
+    "TASKS.md — M3 plainlang-019 acceptance criteria",
+    "tasks/model-cards-oncology-card-013.json",
+    "tasks/model-cards-oncology-expert-007.json"
+  ],
+  "output": "A plain-language education-only summary of one accepted open cancer ML model, committed with a review artifact recording oncologist and patient-advocate sign-offs, published only after both sign-offs are recorded.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

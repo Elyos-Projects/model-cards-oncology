@@ -1,0 +1,32 @@
+{
+  "id": "model-cards-oncology-citationcff-023",
+  "title": "CITATION.cff emitter from canonical schema",
+  "project": "model-cards-oncology",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "oncology", "ml", "tooling", "model-documentation"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Model cards that are committed to a GitHub repository benefit from a CITATION.cff file so that the card itself is citable as a software artifact, improving the reusability and citability of the documented model. A CITATION.cff emitter would project from the canonical schema's provenance and authors fields into the Citation File Format, making cards more findable and attributable.",
+  "objective": "Build and ship a CITATION.cff emitter that projects canonical model-card objects into Citation File Format (CFF) v1.2 YAML, enabling model cards committed to GitHub repos to carry a machine-readable citation.",
+  "acceptanceCriteria": [
+    "Emitter projects canonical model-card JSON into valid CITATION.cff YAML (Citation File Format v1.2); output includes cff-version, message, title, authors, date-released, and url fields mapped from the canonical schema.",
+    "Output is validated against the CFF v1.2 schema.",
+    "Committed golden canonical-to-CFF fixture is diffed in CI.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials or patient data in any committed file.",
+    "Commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — Scope (optional CITATION.cff), Dependencies & integrations",
+    "TASKS.md — Backlog citationcff-023",
+    "Citation File Format (CFF) v1.2 spec; GitHub CITATION.cff support documentation"
+  ],
+  "output": "A merged PR adding a CITATION.cff emitter with a golden fixture and CI integration.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "model-cards-oncology-reuse-020",
+  "title": "Track and verify external reuse/improvement events",
+  "project": "model-cards-oncology",
+  "type": "research",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "oncology", "ml", "open-science", "model-documentation"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The project's success metrics include at least 3 externally verifiable reuse/improvement events: citations of delivered cards, merged model-card PRs upstream, or documented limitations/bias gaps acknowledged by model authors. Self-reported reuse does not count. This task searches for, records, and verifies these events against the delivered cards (card-013, card-014, scale-018) and commits a reuse-events log. Depends on card-013, card-014, and scale-018.",
+  "objective": "Identify, verify, and record at least 3 externally verifiable reuse or improvement events attributable to delivered model cards from this project, with evidence links committed to the project repo.",
+  "acceptanceCriteria": [
+    "At least 3 externally verifiable reuse or improvement events are identified and recorded: each event must be a citation of a delivered card in a paper/report, a merged model-card PR or metadata update upstream, or a documented acknowledgement of a card's limitation or bias finding by the model's author(s).",
+    "Each event record includes: the delivered card it references, the event type (citation / PR-merge / author-acknowledgement), an externally verifiable evidence link (DOI, GitHub PR URL, issue URL, or public post permalink), and the date observed.",
+    "Self-reported reuse (where the only evidence is the project's own claim) is explicitly excluded; all events are externally verifiable by a third party from the evidence link alone.",
+    "The reuse-events log is committed to the project repo and reviewed by the Steward.",
+    "The log is cross-referenced against the outcome ledger (outcomes/<model-id>.json) for the relevant models."
+  ],
+  "resources": [
+    "PLAN.md — Success metrics (verified reuse/improvement signal), Outcome tracking",
+    "TASKS.md — M3 reuse-020 acceptance criteria",
+    "tasks/model-cards-oncology-card-013.json",
+    "tasks/model-cards-oncology-card-014.json",
+    "tasks/model-cards-oncology-scale-018.json"
+  ],
+  "output": "A committed reuse-events log recording at least 3 externally verifiable reuse/improvement events with evidence links, reviewed by the Steward.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

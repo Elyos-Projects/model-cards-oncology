@@ -1,0 +1,35 @@
+{
+  "id": "model-cards-oncology-harness-017",
+  "title": "Reproducible subgroup-metric harness (open de-identified eval data only)",
+  "project": "model-cards-oncology",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "oncology", "ml", "bias", "fairness", "tooling"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The bias-005 standard requires that subgroup metrics are either cited (reported-unverified) or independently reproduced (reproduced) on open eval data. Without a harness, only the authors' numbers can be cited, and bias gaps cannot be independently verified. The harness recomputes metrics only on open-access/de-identified eval data in a pinned, containerized environment, committing only aggregate results. It must never touch controlled-access or identifiable patient data. Depends on bias-005 and validator-006.",
+  "objective": "Build and ship a reproducible subgroup-metric harness that recomputes reported metrics only on open-access/de-identified eval data in a pinned, containerized environment, commits only aggregate metrics and provenance pointers, and verifies subgroup breakdowns for at least one real delivered model card.",
+  "acceptanceCriteria": [
+    "Harness recomputes reported metrics only on open-access/de-identified eval data via a pinned, containerized environment (image hash recorded in specVersions); it never downloads or touches controlled-access/identifiable patient data, and stops with a clear error if a controlled-access barrier or PII signal is encountered.",
+    "A committed synthetic eval fixture with known ground-truth subgroup metrics is reproduced exactly by the harness in CI; this golden fixture uses no real patient data.",
+    "At least one real delivered model card's subgroup metric is verified by the harness on open eval data; the result is written back to the card with verified:reproduced and provenance pointer committed.",
+    "The harness commits only aggregate metrics and provenance pointers (no patient images, rows, or individual-level data) to any tracked file.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials or patient data in any committed file.",
+    "Commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — Reproducible subgroup-metric harness, Model & eval-data access protocol, Test fixtures & golden files",
+    "TASKS.md — M2 harness-017 acceptance criteria",
+    "tasks/model-cards-oncology-bias-005.json",
+    "tasks/model-cards-oncology-validator-006.json",
+    "TCIA collection licenses (CC-BY open eval data)"
+  ],
+  "output": "A merged PR adding a reproducible subgroup-metric harness with a synthetic golden fixture (CI-verified), at least one real card metric verified with verified:reproduced, and no patient data committed.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "model-cards-oncology-mct-016",
+  "title": "Model Card Toolkit JSON + Croissant eval-dataset adapter",
+  "project": "model-cards-oncology",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "oncology", "ml", "tooling", "model-documentation"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The canonical model-card schema is the source of truth; all output formats are projections of it. The Hugging Face emitter (validator-006) covers one output format; this task adds two more: Google Model Card Toolkit JSON and Croissant ML v1.0 metadata for eval datasets. These adapters extend reach to additional audiences (Google's tooling ecosystem, dataset indexers) and are required for the M2 goal of measurable per-model effort reduction. Depends on validator-006.",
+  "objective": "Build and ship a Google Model Card Toolkit JSON emitter and a Croissant ML v1.0 eval-dataset metadata adapter, both projecting from the canonical schema, with committed golden fixtures validated against the pinned specs in CI.",
+  "acceptanceCriteria": [
+    "Emitter produces valid Google Model Card Toolkit JSON from canonical model-card objects; output is validated against the pinned Model Card Toolkit schema release; the pinned version is recorded in the output's specVersions block.",
+    "Adapter produces valid Croissant ML v1.0 metadata for each eval dataset listed in the canonical card's evalData[]; output is validated against the pinned Croissant ML v1.0 spec.",
+    "Committed golden canonical-to-output fixtures for both adapters are diffed in CI; any schema drift fails the CI check.",
+    "specVersions block in both outputs records the pinned Model Card Toolkit release and Croissant ML v1.0 version.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials or patient data in any committed file.",
+    "Commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — Tech stack, Solution approach, Test fixtures & golden files",
+    "TASKS.md — M2 mct-016 acceptance criteria",
+    "tasks/model-cards-oncology-validator-006.json",
+    "Google Model Card Toolkit (pinned release)",
+    "Croissant ML v1.0 spec"
+  ],
+  "output": "A merged PR adding a Google Model Card Toolkit JSON emitter and Croissant ML v1.0 eval-dataset adapter with golden fixtures and CI integration.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "model-cards-oncology-dash-026",
+  "title": "Outcome dashboard for accepted cards + reuse events",
+  "project": "model-cards-oncology",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "oncology", "ml", "tooling", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The project's success is measured by accepted cards, verified reuse events, completeness scores, and per-model effort. These are recorded in the outcome ledger (outcomes/<model-id>.json). Without a dashboard, the Steward must manually aggregate these records. An outcome dashboard that reads the ledger and renders summary statistics would make project health visible at a glance and support milestone reporting.",
+  "objective": "Build and ship a lightweight outcome dashboard that reads the project's outcome ledger (outcomes/<model-id>.json files) and renders summary statistics for accepted cards, completeness scores, verified reuse events, and per-model effort.",
+  "acceptanceCriteria": [
+    "Dashboard reads the committed outcome ledger files (outcomes/<model-id>.json) and produces a summary view: count of accepted cards by channel, average and per-card completeness before/after scores, count of verified reuse events, and per-model effort (AI-session minutes + human-review cycles) with median highlighted.",
+    "Dashboard runs as a static build (no server, no runtime service, no credentials) and outputs to a committed static HTML or Markdown file readable without a build step.",
+    "Dashboard does not display any patient data, personal health information, or PII; only aggregate outcome metrics are rendered.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials or patient data in any committed file.",
+    "Commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md — Success metrics, Outcome tracking, Effort-reduction metric",
+    "TASKS.md — Backlog dash-026",
+    "outcomes/ directory structure (outcomes/<model-id>.json ledger)"
+  ],
+  "output": "A merged PR adding a lightweight outcome dashboard that reads the outcome ledger and renders summary statistics as a static build artifact.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
